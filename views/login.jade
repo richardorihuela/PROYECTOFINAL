@@ -1,0 +1,42 @@
+extends ./layout.jade
+
+block navegador
+	ul.navbar
+		li
+			a(href='#') Principal
+		li
+			a(href='#') INGRESAR
+
+block contenido
+	.contenedor-portada
+		img.portada.centrado(src='../images/ModeloPortada.jpg', alt='portada')
+	#contenido
+	#article.horizontal
+		h3 DETALLA LA LECCIÓN PARA TU CLASE
+		#descripcion.centrado
+			p
+				| La educación virtual ha cobrado importancia en los últimos años
+				| debido al avance tecnológico y, también, a las ventajas que
+				| conlleva. Para los profesionales de hoy en día, no siempre es
+				| fácil adentrarse de nuevo en el mundo de la formación.
+				br
+				| Las lecciones en nuestra plataforma son mucho más dinámicas
+				| y con un mayor control, para una mejor educación.
+				br
+				| Ahora es posible estudiar desde cualquier parte del mundo y en
+				| cualquier momento sin que esto afecte a la calidad de la formación.
+				| El alumno podrá acceder en línea a todos los conocimientos sin
+				| importar la distancia que le sitúe de la escuela de negocios o
+				| universidad, así como en cualquier horario.
+	#form-login.horizontal
+		form(action='/login', method='POST')
+			.form-group
+				input#usuario(type='text', name='usuario', ,='', placeholder='Nombre')
+				br
+				label(for='usuario') Usuario
+			.form-group
+				input#password(type='password', name='password', ,='', placeholder='Password')
+				br
+				label(for='password') Password
+			div
+				input.centrado.btn.btn-primary(type='submit', ,='', value='Entrar')

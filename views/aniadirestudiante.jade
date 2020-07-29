@@ -1,0 +1,34 @@
+extends ./layout.jade
+
+block navegador
+	ul.navbar
+		li
+			a(href='/listarestudiantes') Estudiantes
+		li
+			a(href='/perfildocente') Perfil
+block contenido
+	- x = 0
+	each estudiante, i in estudiantes
+		if x%2==0
+			.impar
+				h3.espacio!= estudiante
+				form(action='/tareasestudiante', method='POST')
+					input(type='hidden', name='nombre', value=estudiante)
+					input(type='hidden', name='cialumno', value=cis[i])
+					input(type='hidden', name='idm', value=idmateria)
+					div
+						input.impar.espacio(type='submit', value='Tareas')
+
+		else
+			h3.par.espacio!= estudiante
+			form(action='/tareasestudiante', method='POST')
+				input(type='hidden', name='nombre', value=estudiante)
+				input(type='hidden', name='cialumno', value=cis[i])
+				input(type='hidden', name='idm', value=idmateria)
+				div
+					input.par.espacio(type='submit', value='Tareas')
+	- x=x+1
+
+	.aniadir-estudiante.espacio
+		button.centrado.espacio.impar
+			a.blanco(href='/nuevoestudiante')  Añadir Estudiante

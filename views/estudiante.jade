@@ -1,0 +1,38 @@
+extends ./layout.jade
+
+block navegador
+	ul.navbar
+		li
+			a(href='/listarestudiantes') Estudiantes
+		li
+			a(href='/perfildocente') Perfil
+block contenido
+	each tarea,x in tareas
+		if x%2==0
+			.impar
+				a(href!=tarea).horizontal
+					h3.espacio.blanco!= nombretareas[x]
+				h4.horizontal.navbar.espacio!= "Nota: " + calificaciones
+				form(action='/calificar', method='POST')
+					.form.espacio-vertical
+						input(type='hidden', name='nombretarea' value=tarea)
+						input(type='text', name='nota', placeholder='Nota')
+						br
+						label(for='nota') Nota
+					div
+						input.centrado.impar.espacio(type='submit', value='Calificar')
+				
+		else
+			a(href!=tarea)
+				h3.espacio.blanco!= nombretareas[x]
+			h4.horizontal.navbar.espacio!= "Nota Total: " + calificaciones
+			form(action='/calificar', method='POST')
+				.form.espacio-vertical
+					input(type='hidden', name='nombretarea' value=tarea)
+					input(type='text', name='nota', placeholder='Nota')
+					br
+					label(for='nota') Nota
+				div
+					input.centrado.espacio(type='submit', value='Calificar')
+	.centrado
+		h4.horizontal.espacio!= "Nota Total: " + notafinal

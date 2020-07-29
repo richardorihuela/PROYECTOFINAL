@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Mi Tutor</title>
+	<meta charset="UTF-8">
+	<!-- MAIN CSS-->
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="form-signup" class="espacio">
+        <form action="/filesdocente", method="POST" enctype="multipart/form-data">
+            <div class="form centrado">
+                <input type="text" name="idtarea", placeholder="idtarea", id="idtarea", class="form-control">
+                <br/><label for="idtarea">ID unico de Tarea</label>
+            </div>
+            <div class="form centrado espacio-vertical">
+                <input type="text" name="nombre", placeholder="Nombre", id="nombre", class="form-control">
+                <br/><label for="nombre">Nombre</label>
+            </div>
+            <div class="form centrado espacio-vertical">
+                <input type="number" name="puntos", placeholder="Puntos", id="puntos", class="form-control">
+                <br/><label for="puntos">Puntos</label>
+            </div>
+            <div class="form centrado espacio-vertical">
+                <input type="text" name="idmateria", placeholder="idmateria", id="idmateria", class="form-control">
+                <br/><label for="idmateria">ID Materia</label>
+            </div>
+            <div class="form centrado">
+                <input type="file" name="tarea", id="tarea", class="form-control">
+                <br/><label for="tarea">Documento PDF</label>
+            <div>
+                <input type="submit", value="Subir", class="centrado impar espacio">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

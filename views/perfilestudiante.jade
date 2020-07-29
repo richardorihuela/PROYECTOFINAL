@@ -1,0 +1,28 @@
+extends ./layout.jade
+
+block navegador
+	ul.navbar
+		li
+			a(href='/miscursos') Mis Cursos
+		li
+			a(href='/perfilestudiante') Perfil
+block contenido
+	.datos
+		.foto
+		.centrado
+			h2.blanco!= nombre
+			.mitades
+			h5.blanco!= "Curso: " + grado 
+			.mitades
+			h5.blanco!= "Paralelo: " + paralelo
+	.detalles
+	.materia.horizontal
+		h3 CURSOS QUE ESTOY TOMANDO
+		hr
+		each materia in materias
+			p.texto-materia.espacio-horizontal.espacio-vertical!= materia
+		
+	.tareas-pendientes.horizontal
+		h4.espacio-vertical Tareas Próximas
+		each tarea in tareas
+			p.texto-materia.espacio-vertical!= tarea

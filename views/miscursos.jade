@@ -1,0 +1,45 @@
+extends ./layout.jade
+
+block navegador
+	ul.navbar
+		li
+			a(href='/miscursos') Mis Cursos
+		li
+			a(href='/perfilestudiante') Perfil
+block contenido
+	h2.impar.espacio MATERIA
+	hr
+	- x = 0
+	each idm, i in materias
+		- ruta = "/" + tareas[i] + ".pdf"
+		if x%2==0
+			.impar
+				h2.horizontal.espacio.texto-materia!= idm
+				h5.horizontal.espacio.navbar.blanco Calificación
+				a(href!= ruta)
+					h3.espacio-horizontal.blanco!= tareas[i]				
+				form(action='/filesestudiante', method='POST', enctype='multipart/form-data')
+					input(type='hidden', name='idmateria' value=idm)
+					input(type='hidden', name='nombretarea', value=tareas[i])
+					.espacio
+						input#tarea.form-control(type='file', name='tarea')
+						br
+						label(for='tarea') Selecciona un archivo
+					div
+						input.centrado.impar.espacio(type='submit', value='Subir')
+		else
+			div
+				h2.horizontal.espacio.texto-materia!= idm
+				h5.horizontal.espacio.navbar Calificación
+				a(href!= ruta)
+					h3.espacio-horizontal!= tareas[i]
+				form(action='/filesestudiante', method='POST', enctype='multipart/form-data')
+					input(type='hidden', name='idmateria' value=idm)
+					input(type='hidden', name='nombretarea', value=tareas[i])
+					.espacio
+						input#tarea.form-control(type='file', name='tarea')
+						br
+						label(for='tarea') Selecciona un archivo
+					div
+						input.centrado.espacio(type='submit', value='Subir')
+		- x=x+1

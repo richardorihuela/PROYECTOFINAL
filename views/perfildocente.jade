@@ -1,0 +1,31 @@
+extends ./layout.jade
+
+block navegador
+	ul.navbar
+		li
+			a(href='/listarestudiantes') Estudiantes
+		li
+			a(href='/perfildocente') Perfil
+block contenido
+	.datos
+		.foto
+		.centrado
+			h2.blanco!= nombre
+			.mitades
+			h5.blanco!= "Curso: "+grado
+			.mitades
+			h5.blanco!= "Paralelo: "+paralelo
+	.detalles
+	.materia.horizontal
+		h3 CURSOS QUE ESTOY DICTANDO
+		hr
+		h4.espacio-vertical!= materia
+		h3 TÍTULO DE LA MATERIA
+		p.texto-materia.espacio-horizontal.espacio-vertical!= nombremateria
+	.tareas-pendientes.horizontal
+		h4.espacio-vertical Tareas
+		each tarea in tareas
+			p.texto-materia.espacio-vertical!= tarea
+	.form.centrado.espacio-vertical
+		a(href="/aniadirtarea")
+			button.form-control Añadir tarea

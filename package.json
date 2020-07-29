@@ -1,0 +1,22 @@
+{
+  "name": "0_proyectoeducacionvirtualnodejs",
+  "version": "0.0.1",
+  "description": "Aplicacion web para evaluacion de estudiantes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Hector Orihuela Gil",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "fs": "0.0.1-security",
+    "jade": "^1.11.0",
+    "mime-types": "^2.1.27",
+    "mongoose": "^5.9.24",
+    "multer": "^1.4.2",
+    "pg": "^8.3.0"
+  }
+}

@@ -1,0 +1,45 @@
+extends ./layout.jade
+
+block navegador
+	ul.navbar
+		li
+			a(href='/listarestudiantes') Estudiantes
+		li
+			a(href='/perfildocente') Perfil
+block contenido
+	#form-signup.espacio
+		form(action='/registrodoc', method='POST')
+			.form.centrado.espacio-vertical
+				input#ci.form-control(type='text', name='ci', placeholder='CI')
+				br
+				label(for='ci') CI
+			.form.centrado.espacio-vertical
+				input#password.form-control(type='text', name='password', placeholder='Password')
+				br
+				label(for='password') Password
+			.form.centrado.espacio-vertical
+				input#nombre.form-control(type='text', name='nombre', placeholder='Nombre')
+				br
+				label(for='nombre') Nombre
+			.form.centrado.espacio-vertical
+				input#paterno.form-control(type='text', name='paterno', placeholder='Paterno')
+				br
+				label(for='paterno') Apellido Paterno
+			.form.centrado.espacio-vertical
+				input#materno.form-control(type='text', name='materno', placeholder='Materno')
+				br
+				label(for='materno') Apellido Materno
+			.form.centrado.espacio-vertical
+				input#sexo.form-control(type='text', name='sexo', placeholder='Sexo')
+				br
+				label(for='sexo') Sexo
+			.form.centrado.espacio-vertical
+				input#celular.form-control(type='text', name='celular', placeholder='Celular')
+				br
+				label(for='celular') Celular
+			.form.centrado.espacio-vertical
+				input#materia.form-control(type='text', name='materia', placeholder='Materia')
+				br
+				label(for='materia') Materia
+			div
+				input.centrado.impar.espacio(type='submit', value='Registrar Docente')

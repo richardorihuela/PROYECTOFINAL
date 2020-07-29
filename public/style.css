@@ -1,0 +1,156 @@
+/*quitar decoraciones a hipervinculos*/
+a{
+    color: black;
+    text-decoration: none;
+}
+
+h2, h3, h4, h5{
+    margin: 0;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+hr{
+    background-color: #2AEDFA;
+    border: none;
+    height: 7px;
+}
+
+label{
+    color: #fff;
+}
+
+li{
+    display: inline;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.blanco{
+    color: #fff;
+}
+.centrado{
+    display: block;
+    margin: auto;
+}
+
+.contenedor-portada{
+    background-color: #162937;
+    padding: 20px;
+}
+.datos{
+    background-color: #162937;
+    padding: 0.5% 5%;
+}
+.espacio{
+    padding: 1.5em;
+}
+.espacio-horizontal{
+    margin-left: 5em;
+}
+.espacio-vertical{
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+.form{
+    text-align: center;
+}
+.form-control{
+    width: 600px;
+}
+.imglogo{
+    width: 10%;
+}
+.impar{
+    background-color: #162937;
+    color: #fff;
+}
+.horizontal{
+    display: inline-block;
+}
+
+.form-group{
+    margin: 10px;
+}
+.foto{
+    background-image: url('./images/Perfil.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 50%;
+    height: 300px;
+    margin: 3em 0;
+    width: 300px;    
+}
+.materia{
+    margin: 1em 1em 1em 2em;
+    width: 50%;
+}
+.mitades{
+    display: inline-block;
+    width: 45%;
+}
+
+.navbar{
+    float: right;
+    text-align: right;
+}
+.negro{
+    color: #000;
+}
+.par{
+
+}
+.portada{
+    width: 98%;
+}
+.texto-materia{
+    color: #0DD0DD;
+}
+
+#arriba{    
+    height: 8px;
+    width: 100%;
+}
+#article{
+    padding: 12px;
+    width: 60%;
+}
+#contenido{
+    float: right;
+    width: 95%;
+}
+#descripcion{
+    width: 90%;
+}
+#footer{
+    display: inline-block;
+    width: 100%;
+}
+#form-login{
+    background-color: #162937;
+    float: right;
+    margin: 2px;
+    padding: 2% 5%;
+}
+#form-signup{
+    background-color: #162937;
+}
+#nav{
+    margin: 0 15px 0 8px;
+    font-size: 1.3em;
+}
+#pie{
+    width: 85%;
+    text-align: center;
+}
+#rectangulo{
+    background-color: orangered;
+    float: right;
+    height: 8px;
+    width: 80%;
+}
